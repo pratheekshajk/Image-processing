@@ -133,7 +133,7 @@ def neighbors(r, row, column):
 neighbors(2,2,2)
 
 ## Output:
-
+![image](https://user-images.githubusercontent.com/72437208/104447021-39b2cb80-55c1-11eb-8cdb-1a4278cd407b.png)
  
 8. Write a program to find sum of neighbors values in matrix.
 import numpy as np
