@@ -113,3 +113,60 @@ img = Image.fromarray( mat , 'RGB')
 img.show()
 Output:
 ![image](https://user-images.githubusercontent.com/72437208/104435578-8f33ac00-55b2-11eb-8c20-e7d896f53481.png)
+7.Develop a program to find the neighbors of each element in the matrix.
+import numpy as np
+i=0
+j=0
+a = np.array([[1,2,3,4,5,6,7],[7,6,5,4,3,2,1],[4,5,6,7,3,8,3],[2,3,4,5,6,7,8],[4,5,6,7,8,9,4]])
+print('7x7 matrix is:\n', a)           
+def neighbors(r, row, column):
+     return [[a[i][j] if  i >= 0 and i < len(a) and j >= 0 and j < len(a[0]) else 0
+                for j in range(column-1-r, column+r)]
+                    for i in range(row-1-r, row+r)]
+neighbors(2,2,2)
+Output:
+7x7 matrix is:
+ [[1 2 3 4 5 6 7]
+ [7 6 5 4 3 2 1]
+ [4 5 6 7 3 8 3]
+ [2 3 4 5 6 7 8]
+ [4 5 6 7 8 9 4]]
+Out[3]:
+[[0, 0, 0, 0, 0],
+ [0, 1, 2, 3, 4],
+ [0, 7, 6, 5, 4],
+ [0, 4, 5, 6, 7],
+ [0, 2, 3, 4, 5]]
+2. Write a program to find sum of neighbors values in matrix.
+import numpy as np
+def sumNeighbors(M,x,y):
+    l= []
+    for i in range(max(0,x-1),x+2): 
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: 
+                pass
+    return sum(l)-M[x][y] 
+M = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]] 
+M = np.asarray(M)
+N = np.zeros(M.shape)
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+print("Original matrix:\n", M)
+print("Summed neighbors matrix:\n", N)
+Output:
+Original matrix:
+ [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Summed neighbors matrix:
+ [[11. 19. 13.]
+ [23. 40. 27.]
+ [17. 31. 19.]]
+
+
