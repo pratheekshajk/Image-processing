@@ -80,3 +80,22 @@ cv2.destroyAllWindows()
 Output:
 ![image](https://user-images.githubusercontent.com/72437208/104432837-6bbb3200-55af-11eb-98d8-a15554b13a9d.png)
 ![image](https://user-images.githubusercontent.com/72437208/104433079-acb34680-55af-11eb-9b80-54c18aae2d01.png)
+5.Develop program to given colour images to different colour space.
+//Color spaces are a way to represent the color channels present in the image that gives the image that particular hue.There are several different color spaces and each has its own significance.color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value).
+import cv2
+img=cv2.imread('nature.jpg')
+yuv_img = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
+cv2.imshow('yuv image', yuv_img)
+cv2.waitKey()
+cv2.imshow('Y channel', yuv_img[:, :, 0])
+cv2.imshow('U channel', yuv_img[:, :, 1])
+cv2.imshow('V channel', yuv_img[:, :, 2])
+cv2.waitKey()
+hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+cv2.imshow('HSV image', hsv_img)
+cv2.waitKey()
+cv2.imshow('h channel',hsv_img[:,:,0])
+cv2.imshow('s channel',hsv_img[:,:,1])
+cv2.imshow('v channel',hsv_img[:,:,2])
+cv2.waitKey()
+Output: 
