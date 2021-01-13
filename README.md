@@ -78,4 +78,4 @@ cv2.imshow("Binary", bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 Output:
-
+![image](https://user-images.githubusercontent.com/72437208/104432837-6bbb3200-55af-11eb-98d8-a15554b13a9d.png)
