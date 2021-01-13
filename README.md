@@ -59,3 +59,4 @@ mean=im/len(files)
 cv2.imshow("mean",mean)
 cv2.waitKey(0)
 Output:
+![image](https://user-images.githubusercontent.com/72437208/104429879-17fb1980-55ac-11eb-9c95-d2579bbd2eb8.png)
