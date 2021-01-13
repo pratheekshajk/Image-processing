@@ -1,6 +1,6 @@
 # Image-processing
 1.Develp program to display grayscale image using read and write operation.
-
+//gray scale image is the process of converting an image from other color space.
 import numpy as np
 import cv2
 img = cv2.imread('nature.jpg',0)
@@ -104,6 +104,7 @@ Output:
 ![image](https://user-images.githubusercontent.com/72437208/104434791-aa51ec00-55b1-11eb-8a85-acd36d700804.png)
 ![image](https://user-images.githubusercontent.com/72437208/104435009-ea18d380-55b1-11eb-9b73-703a4b83f291.png)
 6.Develop a program to create an images from 2D array.Generate array of random size.
+// 2D array:Two dimensional array is an array within an array.It is the type of the array,the position of data element is reffered by two indices instead of one.
 import numpy as np
 from PIL import Image
 array = np.linspace(0,1,200*220)
@@ -111,3 +112,4 @@ mat = np.reshape(array,(200,220))
 img = Image.fromarray( mat , 'RGB')
 img.show()
 Output:
+![image](https://user-images.githubusercontent.com/72437208/104435578-8f33ac00-55b2-11eb-8c20-e7d896f53481.png)
