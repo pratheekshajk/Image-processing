@@ -102,3 +102,12 @@ Output:
 ![image](https://user-images.githubusercontent.com/72437208/104434358-2435a580-55b1-11eb-8558-a8fb0094eb06.png)
 ![image](https://user-images.githubusercontent.com/72437208/104434643-75de3000-55b1-11eb-90a8-93555969233b.png)
 ![image](https://user-images.githubusercontent.com/72437208/104434791-aa51ec00-55b1-11eb-8a85-acd36d700804.png)
+![image](https://user-images.githubusercontent.com/72437208/104435009-ea18d380-55b1-11eb-9b73-703a4b83f291.png)
+6.Develop a program to create an images from 2D array.Generate array of random size.
+import numpy as np
+from PIL import Image
+array = np.linspace(0,1,200*220)
+mat = np.reshape(array,(200,220))
+img = Image.fromarray( mat , 'RGB')
+img.show()
+Output:
