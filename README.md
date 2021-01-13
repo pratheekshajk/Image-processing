@@ -124,6 +124,7 @@ def neighbors(r, row, column):
                 for j in range(column-1-r, column+r)]
                     for i in range(row-1-r, row+r)]
 neighbors(2,2,2)
+
 Output:
 7x7 matrix is:
  [[1 2 3 4 5 6 7]
@@ -137,7 +138,8 @@ Out[3]:
  [0, 7, 6, 5, 4],
  [0, 4, 5, 6, 7],
  [0, 2, 3, 4, 5]]
-2. Write a program to find sum of neighbors values in matrix.
+ 
+8. Write a program to find sum of neighbors values in matrix.
 import numpy as np
 def sumNeighbors(M,x,y):
     l= []
@@ -169,4 +171,38 @@ Summed neighbors matrix:
  [23. 40. 27.]
  [17. 31. 19.]]
 
+3. Write a C++ program to perform operator overloading,assignment operator of two matrix.
+#include <iostream>
+using namespace std;
+int findsum(int n)
+{
+    int a[100][100], b[100][100], sum=0, i, j;
+    cout<<"enter first matrix";
+    for(i = 0; i < n; ++i)
+       for(j = 0; j < n; ++j)
+        cin >> a[i][j];
+     
+    for(i = 0; i < n; ++i)
+        for(j = 0; j < n; ++j)
+         b[i][j]=a[i][j];
+    for(i = 0; i < n; ++i)
+        for(j = 0; j < n; ++j)
+            sum+=b[i][j];
+             cout<< "Sum of two matrix is: " << endl;
+    
+return sum;
+}
+int main()
+{
+  int n=3;
+  cout<<findsum(n);
+  return 0;
+}
 
+Output:
+enter first matrix
+1 2 3
+2 3 4
+3 4 5
+Sum of two matrix is: 
+27
