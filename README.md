@@ -100,3 +100,4 @@ cv2.imshow('v channel',hsv_img[:,:,2])
 cv2.waitKey()
 Output: 
 ![image](https://user-images.githubusercontent.com/72437208/104434358-2435a580-55b1-11eb-8558-a8fb0094eb06.png)
+![image](https://user-images.githubusercontent.com/72437208/104434643-75de3000-55b1-11eb-90a8-93555969233b.png)
