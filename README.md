@@ -133,18 +133,7 @@ def neighbors(r, row, column):
 neighbors(2,2,2)
 
 ## Output:
-7x7 matrix is:
- [[1 2 3 4 5 6 7]
- [7 6 5 4 3 2 1]
- [4 5 6 7 3 8 3]
- [2 3 4 5 6 7 8]
- [4 5 6 7 8 9 4]]
-Out[3]:
-[[0, 0, 0, 0, 0],
- [0, 1, 2, 3, 4],
- [0, 7, 6, 5, 4],
- [0, 4, 5, 6, 7],
- [0, 2, 3, 4, 5]]
+
  
 8. Write a program to find sum of neighbors values in matrix.
 import numpy as np
@@ -169,9 +158,9 @@ for i in range(M.shape[0]):
 print("Original matrix:\n", M)
 print("Summed neighbors matrix:\n", N)
 Output:
+![image](https://user-images.githubusercontent.com/72437208/104446795-f8bab700-55c0-11eb-9cde-16ee6db543be.png)
 
-
-3. Write a C++ program to perform operator overloading,assignment operator of two matrix.
+9. Write a C++ program to perform operator overloading,assignment operator of two matrix.
 #include <iostream>
 using namespace std;
 int findsum(int n)
