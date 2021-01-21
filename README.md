@@ -249,5 +249,7 @@ cv2.imshow('Set to 0 Inverted', thresh5)
 cv2.waitKey(0) 
 cv2.destroyAllWindows()
 ## output:
+![image](https://user-images.githubusercontent.com/72437208/105331231-36d75c80-5bf9-11eb-8e0a-436f84d46a30.png)
+
 
 
