@@ -252,5 +252,16 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72437208/105331231-36d75c80-5bf9-11eb-8e0a-436f84d46a30.png)
 ![image](https://user-images.githubusercontent.com/72437208/105331418-700fcc80-5bf9-11eb-9a1b-1f00fab92a60.png)
 
+13.Develop program to power law(Gamma) transformation.
+import cv2 
+import numpy as np 
+img = cv2.imread('nature.jpg') 
+for gamma in [0.1,0.5,1.2,2.2]: 
+    gamma_corrected = np.array(255*(img / 255) ** gamma, dtype = 'uint8') 
+    cv2.imshow('gamma_transformed'+str(gamma)+'.jpg', gamma_corrected) 
+cv2.waitKey(0)                                                                   
+## Output:
+
+
 
 
