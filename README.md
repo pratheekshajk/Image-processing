@@ -210,7 +210,7 @@ return 0;
 ## Output:
 The count is: 12
 
-11.Develop a program to implementation of negative transformation.
+10.Develop a program to implementation of negative transformation.
 import cv2
 import numpy as np
 img=cv2.imread('nature.jpg')
@@ -222,9 +222,32 @@ cv2.waitKey(0)
 ## Output:
 ![image](https://user-images.githubusercontent.com/72437208/105329502-3c33a780-5bf7-11eb-9b69-cfa2e757ac63.png)
 ![image](https://user-images.githubusercontent.com/72437208/105329752-8157d980-5bf7-11eb-9ad0-b661768f0021.png)
-2. Develop a program to implementation of contrast transformation.
+
+11. Develop a program to implementation of contrast transformation.
 from PIL import Image, ImageEnhance 
 im = Image.open('nature.jpg') 
 im3 = ImageEnhance.Color(im) 
 im3.enhance(2.0).show()   
 ## output:
+![image](https://user-images.githubusercontent.com/72437208/105329502-3c33a780-5bf7-11eb-9b69-cfa2e757ac63.png)
+![image](https://user-images.githubusercontent.com/72437208/105330492-5c179b00-5bf8-11eb-83d9-a7b51310b406.png)
+
+12. Develop a program to implementation of threshold images.
+import cv2  
+import numpy as np  
+img= cv2.imread('nature.jpg')  
+ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY) 
+ret, thresh2 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV) 
+ret, thresh3 = cv2.threshold(img, 120, 255, cv2.THRESH_TRUNC) 
+ret, thresh4 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO) 
+ret, thresh5 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO_INV) 
+cv2.imshow('Binary Threshold', thresh1) 
+cv2.imshow('Binary Threshold Inverted', thresh2) 
+cv2.imshow('Truncated Threshold', thresh3) 
+cv2.imshow('Set to 0', thresh4) 
+cv2.imshow('Set to 0 Inverted', thresh5) 
+cv2.waitKey(0) 
+cv2.destroyAllWindows()
+## output:
+
+
