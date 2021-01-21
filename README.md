@@ -160,38 +160,52 @@ print("Summed neighbors matrix:\n", N)
 Output:
 ![image](https://user-images.githubusercontent.com/72437208/104446795-f8bab700-55c0-11eb-9cde-16ee6db543be.png)
 
-9. Write a C++ program to perform operator overloading,assignment operator of two matrix.
+9. Write a C++ program to perform operator overloading.
 #include <iostream>
 using namespace std;
-int findsum(int n)
-{
-    int a[100][100], b[100][100], sum=0, i, j;
-    cout<<"enter first matrix";
-    for(i = 0; i < n; ++i)
-       for(j = 0; j < n; ++j)
-        cin >> a[i][j];
-     
-    for(i = 0; i < n; ++i)
-        for(j = 0; j < n; ++j)
-         b[i][j]=a[i][j];
-    for(i = 0; i < n; ++i)
-        for(j = 0; j < n; ++j)
-            sum+=b[i][j];
-             cout<< "Sum of two matrix is: " << endl;
-    
-return sum;
+class TestClass {
+private:
+int count;
+public:
+TestClass() : count(5) {}
+void operator --() {
+count = count - 3;
 }
-int main()
-{
-  int n=3;
-  cout<<findsum(n);
-  return 0;
-}
+void Display() {
 
-Output:
-enter first matrix
-1 2 3
-2 3 4
-3 4 5
-Sum of two matrix is: 
-27
+cout << "Count: " << count; }
+};
+
+int main() {
+TestClass tc;
+--tc;
+tc.Display();
+return 0;
+}
+## Output:
+count: 2
+
+void operator ++():Overload the meaning of the ++ operator.
+#include <iostream>  
+#include <iostream>  
+using namespace std;
+class OperatorOverload {
+private:
+int x;
+public:
+OperatorOverload() : x(10) {}
+void operator ++() {
+x = x + 2;
+}
+void Print() {
+cout << "The Count is: " << x;
+}
+};
+int main() {
+OperatorOverload ov;
+++ov;  
+ov.Print();
+return 0;
+}
+## Output:
+The count is: 12
