@@ -261,6 +261,7 @@ for gamma in [0.1,0.5,1.2,2.2]:
     cv2.imshow('gamma_transformed'+str(gamma)+'.jpg', gamma_corrected) 
 cv2.waitKey(0)                                                                   
 ## Output:
+![image](https://user-images.githubusercontent.com/72437208/105331880-fb895d80-5bf9-11eb-8c84-2669f9e023c5.png)
 
 
 
