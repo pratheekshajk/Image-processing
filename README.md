@@ -209,3 +209,14 @@ return 0;
 }
 ## Output:
 The count is: 12
+
+10.Develop a program to implementation of negative transformation.
+import cv2
+import numpy as np
+img=cv2.imread('nature.jpg')
+cv2.imshow('nature.jpg',img)
+print(img.dtype)
+img_neg=255-img
+cv2.imshow('negative',img_neg)
+cv2.waitKey(0)
+## Output:
